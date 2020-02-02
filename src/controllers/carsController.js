@@ -5,7 +5,7 @@ exports.get = (req, res, next) => {
 };
 
 exports.getCars = (req, res, next) => {
-  var result = sql.query("SELECT * FROM carro", (err, result, fields) => {
+  var result = sql.query("SELECT * FROM Carro", (err, result, fields) => {
     if (err) {
       console.log("error: ", err);
       res.status(500).send("Ocorreu um erro! :(")
