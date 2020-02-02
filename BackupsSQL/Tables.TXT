@@ -1,0 +1,27 @@
+create table Cliente(
+	id int auto_increment primary key, 
+    nome varchar(200) not null,
+    idade int not null,
+    valorDevedor int null
+    
+);
+
+create table Carro(
+	id int auto_increment primary key, 
+    placa varchar(8) not null,
+    estacionado boolean not null,
+    tempo int null,
+    clientID int not null,
+    FOREIGN KEY (clientID) REFERENCES Cliente(id)
+
+
+),
+
+create table Moto(
+	id int auto_increment primary key, 
+    placa varchar(8) not null,
+    estacionado boolean not null,
+    tempo int null,
+    clientID int not null,
+    FOREIGN KEY (clientID) REFERENCES Cliente(id)
+)
