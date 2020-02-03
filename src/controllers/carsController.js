@@ -49,7 +49,7 @@ exports.saveCars = (req, res, next) => {
     console.log("id: ", id);
     placa = req.body.placa;
     if(placa!=undefined){
-        placa = placa.substring(0, 5);
+        placa = placa.substring(0, 7);
     }else{
         res.status(400).send("Placa não inserida! :(")
     }
